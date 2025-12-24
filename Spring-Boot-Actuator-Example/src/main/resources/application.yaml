@@ -1,0 +1,21 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: Spring-Boot-Actuator-Example
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"       # Exposes ALL Actuator endpoints over HTTP (e.g. /actuator/health, /actuator/metrics, etc.)
+        # Optional: exclude specific ones if needed
+        # exclude: env,beans
+
+  endpoint:
+    health:
+      show-details: always   # Always show full details of health components (e.g. db, diskSpace, custom indicators)
+      # Alternatives:
+      # show-details: when-authorized  # Only show details to authenticated users (default is 'never')
+      # show-details: never            # Hide all details (most secure, default)
