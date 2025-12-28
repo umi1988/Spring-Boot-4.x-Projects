@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Spring-Boot-Compression-Example
+server:
+  port: 9090
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,application/json,application/xml,text/css,text/javascript,application/javascript
+    min-response-size: 1024
