@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Spring-Boot-Stripe-Payment-Intg-Example
+
+server:
+  port: 9191
+
+stripe :
+  secretKey : <secret key>
