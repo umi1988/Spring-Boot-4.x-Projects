@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Spring-Boot-Order-Processing-Kafka-Example
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/<schema_name>
+    username: <username>
+    password: <password>
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 9191
+
+product:
+   discount:
+     update:
+       topicName: PRODUCT_DISCOUNT_UPDATE
