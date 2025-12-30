@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Spring-Boot-RealNotification-System-With-WebSocket
+
+    websocket:
+      enabled: true
+
+server:
+  port : 9191
