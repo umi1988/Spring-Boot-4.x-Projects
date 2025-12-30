@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Spring-Boot-Notification-System-With-WebSocket
+
+server:
+  port: 9191
