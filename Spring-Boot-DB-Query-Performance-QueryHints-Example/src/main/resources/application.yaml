@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: Spring-Boot-DB-Query-Performance-QueryHints-Example
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/<ur schema name>
+    username: <db uername>
+    password: <db password>
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQLDialect
+          format_sql: true
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: true
+        format_sql: true
+        use_sql_comments: true
+
+  logging:
+    level:
+      org.hibernate.stat: debug
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+server:
+  port: 9191
